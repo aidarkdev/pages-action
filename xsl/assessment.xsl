@@ -17,7 +17,7 @@
         <xsl:text>Last assessed on </xsl:text>
         <xsl:value-of select="xs:date(xs:dateTime(when))"/>
       </pre>
-      <xsl:if test="total > 1">
+      <xsl:if test="total &gt; 1">
         <p class="darkred">
           <xsl:value-of select="total"/>
           <xsl:text> assessments on factbase were found</xsl:text>
