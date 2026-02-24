@@ -8,7 +8,7 @@
     Wraps the given JavaScript content in a <script> block with CDATA markers
     so that XML-special characters (&, <, >) do not break XML parsing.
   -->
-  <xsl:template name="cdata-script-wrapper">
+  <xsl:template name="script-with-cdata">
     <xsl:param name="content"/>
     <script type="text/javascript">
       <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>

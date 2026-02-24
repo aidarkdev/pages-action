@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:z="https://www.zerocracy.com" exclude-result-prefixes="xs z">
-  <xsl:include href="cdata-script-wrapper.xsl"/>
+  <xsl:include href="script-with-cdata.xsl"/>
   <xsl:output method="xml" omit-xml-declaration="yes" encoding="UTF-8" indent="yes"/>
   <xsl:param name="today" as="xs:string"/>
   <xsl:param name="css" as="xs:string"/>
@@ -181,7 +181,7 @@
             </xsl:with-param>
           </xsl:call-template>
         </xsl:for-each>
-        <xsl:call-template name="cdata-script-wrapper">
+        <xsl:call-template name="script-with-cdata">
           <xsl:with-param name="content" select="$js"/>
         </xsl:call-template>
         <style>
